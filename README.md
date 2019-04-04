@@ -43,4 +43,13 @@ MAE
 
 Shadow Detection
 -----
-results: [google drive](https://drive.google.com/open?id=1R__w0FXpMhUMnIuoxPaX6cFzwAypX13U)
+results: [google drive](https://drive.google.com/open?id=1R__w0FXpMhUMnIuoxPaX6cFzwAypX13U
+
+Performance
+-----
+BER
+
+|Model|SBU|ISTD|UCF|
+|:----|:----|:----|:----|
+|DSC|5.59|8.24|8.10|
+|CPD|4.19|6.76|7.21|
