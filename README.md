@@ -17,4 +17,7 @@ ResNet50  backbone: [CPD-R](https://drive.google.com/open?id=188sybU9VU5rW2BH2Yz
 
 Saliency Maps
 -----
+VGG16     backbone: [CPD](https://drive.google.com/open?id=1LcCTcKGEsZjO8WUgbGpiiZ4atQrK1u_O)
+
+ResNet50  backbone: [CPD-R](https://drive.google.com/open?id=16pLY2qYZ1KIzPRwR7zFUseEDJiwhdHOg)
 
