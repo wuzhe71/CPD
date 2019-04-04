@@ -21,3 +21,7 @@ VGG16     backbone: [CPD](https://drive.google.com/open?id=1LcCTcKGEsZjO8WUgbGpi
 
 ResNet50  backbone: [CPD-R](https://drive.google.com/open?id=16pLY2qYZ1KIzPRwR7zFUseEDJiwhdHOg)
 
+Shadow Detection
+-----
+results:
+VGG16     backbone: [CPD](https://drive.google.com/open?id=1R__w0FXpMhUMnIuoxPaX6cFzwAypX13U)
