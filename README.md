@@ -24,8 +24,9 @@ ResNet50  backbone: [google drive](https://drive.google.com/open?id=16pLY2qYZ1KI
 Performance
 -----
 Maximum F-measure
+
 |Model|ECSSD|HKU-IS|DUT-OMRON|DUTS-TEST|PASCAL-S|
-|:----|:----|:----|:----|:----|:----|:----|
+|:----|:----|:----|:----|:----|:----|
 |PiCANet|0.931|0.921|0.794|0.851|0.862|
 |CPD|0.936|0.924|0.794|0.864|0.866|
 |PiCANet-R|0.935|0.919|0.803|0.860|0.863|
