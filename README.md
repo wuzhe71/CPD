@@ -7,7 +7,7 @@ python2.7, pytorch 0.4.0
 
 Usage
 -----
-Modify the pathes of backbone network, datasets, and run test_CPD.py
+Modify the pathes of backbone and datasets, then run test_CPD.py
 
 Pre-trained model
 -----
