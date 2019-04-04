@@ -13,63 +13,31 @@ from metric import cal_mae, cal_maxF
 parser = argparse.ArgumentParser()
 parser.add_argument('--testsize', type=int, default=352, help='testing size')
 parser.add_argument('--is_ResNet', type=bool, default=False, help='VGG or ResNet backbone')
-
 opt = parser.parse_args()
+
+dataset_path = 'path/dataset/'
 
 if opt.is_ResNet:
     model = CPD_ResNet()
-    model.load_state_dict(torch.load('CPD-R.pth'))
-    # pre_model = torch.load('./model/CPD-R')
-    # all_params = {}
-    # for key in pre_model.keys():
-    #     if key in model.state_dict().keys():
-    #         all_params[key] = pre_model[key]
-    #     elif 'Incep' in key:
-    #         name = 'rfb' + key.split('Incep')[1]
-    #         if name in model.state_dict().keys():
-    #             all_params[name] = pre_model[key]
-    #     elif 'SA' in key:
-    #         name = 'HA' + key.split('SA')[1]
-    #         if name in model.state_dict().keys():
-    #             all_params[name] = pre_model[key]
-    # assert len(all_params) == len(model.state_dict().keys())
-    # model.load_state_dict(all_params)
+    model.load_state_dict(torch.load('./pre_trained/CPD-R.pth'))
 else:
     model = CPD_VGG()
-    model.load_state_dict(torch.load('CPD.pth'))
-    # pre_model = torch.load('./model/CPD')
-    # all_params = {}
-    # for key in pre_model.keys():
-    #     if key in model.state_dict().keys():
-    #         all_params[key] = pre_model[key]
-    #     elif 'Incep' in key:
-    #         name = 'rfb' + key.split('Incep')[1]
-    #         if name in model.state_dict().keys():
-    #             all_params[name] = pre_model[key]
-    #     elif 'SA' in key:
-    #         name = 'HA' + key.split('SA')[1]
-    #         if name in model.state_dict().keys():
-    #             all_params[name] = pre_model[key]
-    # assert len(all_params) == len(model.state_dict().keys())
-    # model.load_state_dict(all_params)
-
+    model.load_state_dict(torch.load('./pre_trained/CPD.pth'))
 
 model.cuda()
 model.eval()
 
-test_datasets = ['PASCAL', 'ECSSD', 'DUT-OMRON', 'DUTS-TEST', 'HKUIS', 'THUR15K', 'SOD']
+test_datasets = ['PASCAL', 'ECSSD', 'DUT-OMRON', 'DUTS-TEST', 'HKUIS']
 
 for dataset in test_datasets:
     if opt.is_ResNet:
         save_path = './results/ResNet50/' + dataset + '/'
-        # torch.save(model.state_dict(), 'CPD-R.pth')
     else:
         save_path = './results/VGG16/' + dataset + '/'
-        torch.save(model.state_dict(), 'CPD.pth')
     if not os.path.exists(save_path):
         os.makedirs(save_path)
-    image_root = '/backup/materials/Dataset/SalientObject/dataset/' + dataset + '/images/'
-    gt_root = '/backup/materials/Dataset/SalientObject/dataset/' + dataset + '/gts/'
+    image_root = dataset_path + dataset + '/images/'
+    gt_root = dataset_path + dataset + '/gts/'
     test_loader = test_dataset(image_root, gt_root, opt.testsize)
     mae, maxF = cal_mae(), cal_maxF(test_loader.size)
     for i in range(test_loader.size):
