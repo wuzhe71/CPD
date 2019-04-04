@@ -19,10 +19,10 @@ dataset_path = 'path/dataset/'
 
 if opt.is_ResNet:
     model = CPD_ResNet()
-    model.load_state_dict(torch.load('./pre_trained/CPD-R.pth'))
+    model.load_state_dict(torch.load('CPD-R.pth'))
 else:
     model = CPD_VGG()
-    model.load_state_dict(torch.load('./pre_trained/CPD.pth'))
+    model.load_state_dict(torch.load('CPD.pth'))
 
 model.cuda()
 model.eval()
