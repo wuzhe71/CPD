@@ -58,11 +58,11 @@ Citation
 -----
 
 @article{borji2015salient,  
-	title="Salient Object Detection: A Benchmark",  
-	author="Ali {Borji} and Ming-Ming {Cheng} and Huaizu {Jiang} and Jia {Li}",   
-	journal="IEEE Transactions on Image Processing",   
-	volume="24",   
-	number="12",   
-	pages="5706--5722",   
-	year="2015"  
+ title="Salient Object Detection: A Benchmark",  
+ author="Ali {Borji} and Ming-Ming {Cheng} and Huaizu {Jiang} and Jia {Li}",   
+ journal="IEEE Transactions on Image Processing",   
+ volume="24",   
+ number="12",   
+ pages="5706--5722",   
+ year="2015"  
 }
