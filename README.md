@@ -53,3 +53,15 @@ BER
 |:----|:----|:----|:----|
 |DSC|5.59|8.24|8.10|
 |CPD|4.19|6.76|7.21|
+
+Citation
+-----
+@article{borji2015salient,
+	title="Salient Object Detection: A Benchmark",
+	author="Ali {Borji} and Ming-Ming {Cheng} and Huaizu {Jiang} and Jia {Li}",
+	journal="IEEE Transactions on Image Processing",
+	volume="24",
+	number="12",
+	pages="5706--5722",
+	year="2015"
+}
