@@ -54,8 +54,6 @@ class cal_mae(object):
         self.prediction.append(score)
 
     def cal(self, pred, gt):
-        gt[gt >= 0.5] = 1
-        gt[gt < 0.5] = 0
         return np.mean(np.abs(pred-gt))
 
     def show(self):
