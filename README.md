@@ -27,5 +27,4 @@ Performance
 
 Shadow Detection
 -----
-results:
-VGG16     backbone: [google drive](https://drive.google.com/open?id=1R__w0FXpMhUMnIuoxPaX6cFzwAypX13U)
+results: [google drive](https://drive.google.com/open?id=1R__w0FXpMhUMnIuoxPaX6cFzwAypX13U)
