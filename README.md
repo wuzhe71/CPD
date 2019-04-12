@@ -55,3 +55,11 @@ BER
 |CPD|4.19|6.76|7.21|
 
 
+
+
+@inproceedings{paszke2017automatic,
+  title={Automatic differentiation in PyTorch},
+  author={Paszke, Adam and Gross, Sam and Chintala, Soumith and Chanan, Gregory and Yang, Edward and DeVito, Zachary and Lin, Zeming and Desmaison, Alban and Antiga, Luca and Lerer, Adam},
+  booktitle={NIPS-W},
+  year={2017}
+}
