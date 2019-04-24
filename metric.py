@@ -4,7 +4,7 @@ import torch
 
 class cal_maxF(object):
     # max Fmeasure
-    def __init__(self, num, thds=256):
+    def __init__(self, num, thds=255):
         self.num = num
         self.thds = thds
         self.precision = np.zeros((self.num, self.thds))
@@ -20,20 +20,16 @@ class cal_maxF(object):
 
     def cal(self, pred, gt):
         pred = np.uint8(pred*255)
-        target = torch.from_numpy(pred[gt > 0.5])
-        nontarget = torch.from_numpy(pred[gt <= 0.5])
-        targetHist = torch.histc(target.float(), 256, 0, 255)
-        nontargetHist = torch.histc(nontarget.float(), 256, 0, 255)
-        targetHist = self.flip(targetHist).cumsum(dim=0)
-        nontargetHist = self.flip(nontargetHist).cumsum(dim=0)
+        target = pred[gt > 0.5]
+        nontarget = pred[gt <= 0.5]
+        targetHist, _ = np.histogram(target, bins=range(256))
+        nontargetHist, _ = np.histogram(nontarget, bins=range(256))
+        targetHist = np.cumsum(np.flip(targetHist), axis=0)
+        nontargetHist = np.cumsum(np.flip(nontargetHist), axis=0)
         precision = targetHist / (targetHist + nontargetHist + 1e-8)
-        recall = targetHist.numpy() / np.sum(gt)
+        recall = targetHist / np.sum(gt)
 
-        return precision.numpy(), recall
-
-    def flip(self, tensor):
-        inv_idx = torch.arange(tensor.size(0) - 1, -1, -1).long()
-        return tensor[inv_idx]
+        return precision, recall
 
     def show(self):
         assert self.num == self.idx
@@ -42,8 +38,6 @@ class cal_maxF(object):
         fmeasure = 1.3 * precision * recall / (0.3 * precision + recall + 1e-8)
 
         return fmeasure.max()
-
-
 class cal_mae(object):
     # mean absolute error
     def __init__(self):
@@ -58,3 +52,5 @@ class cal_mae(object):
 
     def show(self):
         return np.mean(self.prediction)
+    
+
