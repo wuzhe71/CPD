@@ -38,6 +38,8 @@ class cal_maxF(object):
         fmeasure = 1.3 * precision * recall / (0.3 * precision + recall + 1e-8)
 
         return fmeasure.max()
+    
+    
 class cal_mae(object):
     # mean absolute error
     def __init__(self):
