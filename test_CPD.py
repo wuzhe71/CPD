@@ -8,7 +8,6 @@ from scipy import misc
 from model.CPD_models import CPD_VGG
 from model.CPD_ResNet_models import CPD_ResNet
 from data import test_dataset
-from metric import cal_mae, cal_maxF
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--testsize', type=int, default=352, help='testing size')
@@ -39,7 +38,6 @@ for dataset in test_datasets:
     image_root = dataset_path + dataset + '/images/'
     gt_root = dataset_path + dataset + '/gts/'
     test_loader = test_dataset(image_root, gt_root, opt.testsize)
-    mae, maxF = cal_mae(), cal_maxF(test_loader.size)
     for i in range(test_loader.size):
         image, gt, name = test_loader.load_data()
         gt = np.asarray(gt, np.float32)
@@ -49,9 +47,4 @@ for dataset in test_datasets:
         res = F.upsample(res, size=gt.shape, mode='bilinear', align_corners=False)
         res = res.sigmoid().data.cpu().numpy().squeeze()
         res = (res - res.min()) / (res.max() - res.min() + 1e-8)
-
-        mae.update(res, gt)
-        maxF.update(res, gt)
-
         misc.imsave(save_path+name, res)
-    print('dataset: {} MAE: {:.4f} maxF: {:.4f}'.format(dataset, mae.show(), maxF.show()))
