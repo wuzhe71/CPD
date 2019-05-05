@@ -19,8 +19,8 @@ parser.add_argument('--batchsize', type=int, default=10, help='training batch si
 parser.add_argument('--trainsize', type=int, default=352, help='training dataset size')
 parser.add_argument('--clip', type=float, default=0.5, help='gradient clipping margin')
 parser.add_argument('--is_ResNet', type=bool, default=False, help='VGG or ResNet backbone')
-parser.add_argument('--decay_rate', type=float, default=0.3, help='decay rate of learning rate')
-parser.add_argument('--decay_epoch', type=int, default=30, help='every n epochs decay learning rate')
+parser.add_argument('--decay_rate', type=float, default=0.1, help='decay rate of learning rate')
+parser.add_argument('--decay_epoch', type=int, default=50, help='every n epochs decay learning rate')
 opt = parser.parse_args()
 
 print('Learning Rate: {} ResNet: {} Trainset: {}'.format(opt.lr, opt.is_ResNet, opt.trainset))
