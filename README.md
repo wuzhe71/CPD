@@ -15,7 +15,7 @@ VGG16     backbone: [google drive](https://drive.google.com/open?id=1ddopz30_sNP
 
 ResNet50  backbone: [google drive](https://drive.google.com/open?id=188sybU9VU5rW2BH2Yzhko4w-G5sPp6yG)
 
-Saliency Maps
+Pre-computed saliency maps
 -----
 VGG16     backbone: [google drive](https://drive.google.com/open?id=1LcCTcKGEsZjO8WUgbGpiiZ4atQrK1u_O)
 
@@ -43,7 +43,7 @@ MAE
 
 Shadow Detection
 -----
-results: [google drive](https://drive.google.com/open?id=1R__w0FXpMhUMnIuoxPaX6cFzwAypX13U)
+pre-computed maps: [google drive](https://drive.google.com/open?id=1R__w0FXpMhUMnIuoxPaX6cFzwAypX13U)
 
 Performance
 -----
