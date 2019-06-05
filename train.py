@@ -23,7 +23,7 @@ parser.add_argument('--decay_rate', type=float, default=0.1, help='decay rate of
 parser.add_argument('--decay_epoch', type=int, default=50, help='every n epochs decay learning rate')
 opt = parser.parse_args()
 
-print('Learning Rate: {} ResNet: {} Trainset: {}'.format(opt.lr, opt.is_ResNet, opt.trainset))
+print('Learning Rate: {} ResNet: {}'.format(opt.lr, opt.is_ResNet))
 # build models
 if opt.is_ResNet:
     model = CPD_ResNet()
