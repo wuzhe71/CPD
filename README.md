@@ -11,9 +11,9 @@ Modify the pathes of backbone and datasets, then run test_CPD.py
 
 Pre-trained model
 -----
-VGG16     backbone: [google drive](https://drive.google.com/open?id=1ddopz30_sNPOb0MvTCoNwZwL-oQDMGIW)
+VGG16     backbone: [google drive](https://drive.google.com/open?id=1ddopz30_sNPOb0MvTCoNwZwL-oQDMGIW), [BaiduYun](https://pan.baidu.com/s/1apAFQmgP0AKk-qrvqNE87g)
 
-ResNet50  backbone: [google drive](https://drive.google.com/open?id=188sybU9VU5rW2BH2Yzhko4w-G5sPp6yG)
+ResNet50  backbone: [google drive](https://drive.google.com/open?id=188sybU9VU5rW2BH2Yzhko4w-G5sPp6yG), [BaiduYun](https://pan.baidu.com/s/1P8a9euiI1__cBrk6pVxLGA)
 
 Pre-computed saliency maps
 -----
