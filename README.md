@@ -1,5 +1,6 @@
 Cascaded Partial Decoder for Fast and Accurate Salient Object Detection (CVPR2019)
 ====
+# Our model Ranks first in [SOC benchmark](http://dpfan.net/SOCBenchmark/)
 
 Requirements: 
 ----
@@ -53,3 +54,14 @@ BER
 |:----|:----|:----|:----|
 |DSC|5.59|8.24|8.10|
 |CPD|4.19|6.76|7.21|
+
+# Citation
+```
+@InProceedings{Wu_2019_CVPR,
+author = {Wu, Zhe and Su, Li and Huang, Qingming},
+title = {Cascaded Partial Decoder for Fast and Accurate Salient Object Detection},
+booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2019}
+}
+```
