@@ -1,6 +1,7 @@
 Cascaded Partial Decoder for Fast and Accurate Salient Object Detection (CVPR2019)
 ====
-# Our model Ranks first in [SOC benchmark](http://dpfan.net/SOCBenchmark/)
+
+Our model ranks first in [SOC benchmark](http://dpfan.net/SOCBenchmark/) up to 2019.11.6.
 
 Requirements: 
 ----
