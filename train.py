@@ -73,7 +73,7 @@ def train(train_loader, model, optimizer, epoch):
     if not os.path.exists(save_path):
         os.makedirs(save_path)
     if (epoch+1) % 5 == 0:
-        torch.save(model.state_dict(), save_path + opt.trainset + '_w.pth' + '.%d' % epoch)
+        torch.save(model.state_dict(), save_path + 'CPD.pth' + '.%d' % epoch)
 
 print("Let's go!")
 for epoch in range(1, opt.epoch):
